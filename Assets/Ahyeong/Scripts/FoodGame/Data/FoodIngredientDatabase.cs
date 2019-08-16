@@ -20,6 +20,11 @@ public class FoodIngredientDatabase : ScriptableObject
         }
         _probabilityMax = sum;
     }
+    
+    public void Clear()
+    {
+        ingredients.Clear();
+    }
 
     public FoodIngredient GetIngredient(int id)
     {

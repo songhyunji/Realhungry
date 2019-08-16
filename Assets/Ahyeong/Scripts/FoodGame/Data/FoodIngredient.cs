@@ -30,4 +30,11 @@ public class FoodIngredient : ScriptableObject, IEquatable<FoodIngredient>, ICom
         else
             return this.id.CompareTo(comparePart.id);
     }
+
+#if UNITY_EDITOR
+    public void SetData(Dictionary<string, object> data)
+    {
+
+    }
+#endif
 }
