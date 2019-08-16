@@ -14,6 +14,8 @@ public class Spawner : MonoBehaviour
 
     public void Init()
     {
+        IngredientObject.Init_Ob(prefab);
+
         StartCoroutine(SpawnIngRoutine());
     }
 
@@ -28,6 +30,7 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
+
             next_ing = ingDB.GetRandomIngredient();
             nextIng_Image.sprite = next_ing.sprite;
             nextIng_Text.text = next_ing.nameStr;
@@ -36,7 +39,7 @@ public class Spawner : MonoBehaviour
 
             FoodIngredient ing = next_ing;
 
-            var ing_Object = Instantiate(prefab);
+            var ing_Object = IngredientObject.Pull_Ob();
             ing_Object.transform.position = transform.position;
             ing_Object.Init(ing);
         }

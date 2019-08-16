@@ -9,7 +9,6 @@ public class Pot : MonoBehaviour
         if (c.gameObject.tag == "Ingredient")
         {
             c.GetComponent<IngredientObject>().AddIngredient();
-            Destroy(c.gameObject);
         }
     }
 
