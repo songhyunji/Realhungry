@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
+  m_Name: recp_0
+  m_EditorClassIdentifier: 
+  nameStr: "\uC624\uBBC0\uB77C\uC774\uC2A4"
+  description: "\uACE0\uC2AC\uACE0\uC2AC \uBC25\uC5D0 \uB530\uB4EF\uD55C \uACC4\uB780\uC744
+    \uC5B9\uC740 \uC77C\uBC18 \uC624\uBBC0\uB77C\uC774\uC2A4. \uCF00\uCC71\uC758 \uC0C8\uCF64\uD55C
+    \uD5A5\uAE30\uAC00 \uC2AC\uBA70\uC2DC \uC785\uB9DB\uC744 \uC790\uADF9\uD55C\uB2E4."
+  ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
+    count: 1
+  sprite: {fileID: 0}

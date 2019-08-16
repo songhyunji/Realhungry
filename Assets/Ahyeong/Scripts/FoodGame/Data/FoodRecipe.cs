@@ -10,6 +10,12 @@ public class RecipeEntry: IEquatable<RecipeEntry>, IComparable<RecipeEntry>
     public FoodIngredient ingredient;
     public int count = 1;
 
+    public RecipeEntry(FoodIngredient ing, int cunt)
+    {
+        ingredient = ing;
+        count = cunt;
+    }
+
     public bool Equals(RecipeEntry other)
     {
         if (other == null) return false;
@@ -60,7 +66,7 @@ public class FoodRecipe : ScriptableObject
     public string nameStr;
     [TextArea]
     public string description;
-    public List<RecipeEntry> ingrediensEntries;
+    public List<RecipeEntry> ingrediensEntries = new List<RecipeEntry>();
     public Sprite sprite;
     private int _recipeKey = -1;
 
@@ -68,4 +74,34 @@ public class FoodRecipe : ScriptableObject
     {
         ingrediensEntries.Sort();
     }
+
+
+#if UNITY_EDITOR
+    public void SetData(Dictionary<string, object> data, FoodIngredientDatabase ingredientDatabase)
+    {
+        // name	description
+        nameStr = (string)data["name"];
+        description = (string)data["description"];
+
+        for(int i = 1; i <= ingredientDatabase.ingredients.Count; i++)
+        {
+            string key = "ing_" + i;
+            if(data.ContainsKey(key) && data[key] != null)
+            {
+                int count;
+                try
+                {
+                    count = (int)data[key];
+                }
+                catch
+                {
+                    continue;
+                }
+
+                var ingredient = ingredientDatabase.GetIngredient(i);
+                ingrediensEntries.Add(new RecipeEntry(ingredient, count));
+            }
+        }
+    }
+#endif
 }

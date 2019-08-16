@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FoodRecipeDatabase : ScriptableObject
 {
-    public List<FoodRecipe> recipes;
+    public List<FoodRecipe> recipes = new List<FoodRecipe>();
     public Dictionary<int, FoodRecipe> recipeDictionary = new Dictionary<int, FoodRecipe>();
 
     public void Init()
@@ -16,6 +16,11 @@ public class FoodRecipeDatabase : ScriptableObject
             recipes[i].Init();
             recipeDictionary.Add(recipes[i].RecipeKey, recipes[i]);
         }
+    }
+
+    public void Clear()
+    {
+        recipes.Clear();
     }
 
     public FoodRecipe MakeRecipe(List<FoodIngredient> ingredients)

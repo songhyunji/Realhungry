@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
+  m_Name: recp_6
+  m_EditorClassIdentifier: 
+  nameStr: "\uC2A4\uD14C\uC774\uD06C"
+  description: 
+  ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 3b1451c76a5b1a142ac5acbdfe0be285, type: 2}
+    count: 2
+  sprite: {fileID: 0}
