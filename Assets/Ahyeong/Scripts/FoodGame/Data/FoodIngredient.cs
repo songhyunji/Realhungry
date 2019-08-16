@@ -13,8 +13,8 @@ public class FoodIngredient : ScriptableObject, IEquatable<FoodIngredient>, ICom
     public string description;
     public Sprite sprite;
     public int score;
-    public int probility;
-    public int weight;
+    public int probability;
+    public float weight;
 
     public bool Equals(FoodIngredient other)
     {
@@ -34,7 +34,13 @@ public class FoodIngredient : ScriptableObject, IEquatable<FoodIngredient>, ICom
 #if UNITY_EDITOR
     public void SetData(Dictionary<string, object> data)
     {
-
+        // id	name	description	score	probability	weight
+        id = (int)data["id"];
+        nameStr = (string)data["name"];
+        description = (string)data["description"];
+        score = (int)data["score"];
+        probability = (int)data["probability"];
+        weight = (float)data["weight"];
     }
 #endif
 }

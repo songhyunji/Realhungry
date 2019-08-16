@@ -5,7 +5,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class FoodIngredientDatabase : ScriptableObject
 {
-    public List<FoodIngredient> ingredients;
+    public List<FoodIngredient> ingredients = new List<FoodIngredient>();
     
     private List<int> _probabilityTable = new List<int>();
     private int _probabilityMax;
@@ -15,7 +15,7 @@ public class FoodIngredientDatabase : ScriptableObject
         int sum = 0;
         for(int i = 0; i < ingredients.Count; i++)
         {
-            sum += ingredients[i].probility;
+            sum += ingredients[i].probability;
             _probabilityTable.Add(sum);
         }
         _probabilityMax = sum;
