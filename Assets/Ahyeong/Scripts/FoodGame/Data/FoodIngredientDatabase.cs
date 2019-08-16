@@ -12,6 +12,7 @@ public class FoodIngredientDatabase : ScriptableObject
 
     public void Init()
     {
+        _probabilityTable.Clear();
         int sum = 0;
         for(int i = 0; i < ingredients.Count; i++)
         {
@@ -20,7 +21,7 @@ public class FoodIngredientDatabase : ScriptableObject
         }
         _probabilityMax = sum;
     }
-    
+
     public void Clear()
     {
         ingredients.Clear();

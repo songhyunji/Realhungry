@@ -6,10 +6,12 @@ using UnityEngine.UI;
 public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 {
     public FoodRecipeDatabase recipeDatabase;
+    public FoodIngredientDatabase ingDB;
     public TestIngredientUI prefab;
     public Transform uiParent;
     public Image resultImg;
     public Text resultText;
+    public Spawner spawner;
 
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
     private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
@@ -17,6 +19,8 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     void Start()
     {
         recipeDatabase.Init();
+        ingDB.Init();
+        spawner.Init();
     }
 
     public void AddIngredient(FoodIngredient ingredient)

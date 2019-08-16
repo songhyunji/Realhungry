@@ -15,6 +15,6 @@ public class GyroControl : MonoBehaviour
         Vector2 vec = new Vector2(Mathf.Sin(Mathf.PI * 0.5f * ac), -Mathf.Cos(Mathf.PI * 0.5f * ac));
         vec = vec.normalized * ac_coef;
         Physics2D.gravity = vec;
-        MyDebug.Log(vec.x);
+        //MyDebug.Log(vec.x);
     }
 }
