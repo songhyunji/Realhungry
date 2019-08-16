@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
+  m_Name: RecipeABB
+  m_EditorClassIdentifier: 
+  nameStr: "\uC694\uB9ACABB"
+  description: 
+  ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: 10f52d173308bf440b296e22c2054069, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: a9ced25afcf34744f93cb3e21f4aa598, type: 2}
+    count: 2
+  sprite: {fileID: 21300000, guid: 7d126600b97c31743b79bc3ead45b92c, type: 3}
