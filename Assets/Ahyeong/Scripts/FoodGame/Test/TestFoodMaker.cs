@@ -32,6 +32,15 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
     public void AddIngredient(FoodIngredient ingredient)
     {
+        // 쓰레기 체크
+        if(ingredient.id >= 5)
+        {
+            FoodGameManager.Instance.Score += ingredient.score;
+            ingredients.Clear();
+            ingredientUI.ResetUI();
+            return;
+        }
+
         ingredients.Add(ingredient);
         ingredientUI.SetUI(ingredients);
 
