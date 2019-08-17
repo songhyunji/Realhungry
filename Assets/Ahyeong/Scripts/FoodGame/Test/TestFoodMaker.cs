@@ -17,6 +17,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     public CurrentIngredientUI ingredientUI;
 
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
+    private List<int> scores = new List<int>();
     //private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
 
     public void Init()
@@ -43,7 +44,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         }
 
         ingredients.Add(ingredient);
-        ingredientUI.SetUI(ingredients);
+        ingredientUI.AddUI(ingredient);
 
         // TO-DO: 연출 필요
         if(ingredients.Count >= 4)
@@ -69,13 +70,17 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         }
         else
         {
+            scores.Clear();
             int sum = 0;
             foreach(var ing in ingredients)
             {
                 sum += ing.score;
+                scores.Add(ing.score);
             }
             FoodGameManager.Instance.Score += sum;
             FoodGameManager.Instance.AddSatisfy(sum);
+
+            ingredientUI.ShowUI();
         }
 
         ingredients.Clear();
