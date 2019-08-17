@@ -45,6 +45,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         Score = 0;
         spawner.StartSpawn();
         foodMaker.ResetValue();
+        satisfy.ResetValues();
         overUI.SetActive(false);
     }
 

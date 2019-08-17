@@ -72,9 +72,9 @@ public class MonsterSatisfy : MonoBehaviour
 
     private bool _isSatisfiedMode = false;
 
-    private void Start()
+    public void ResetValues()
     {
-        Satisfy = maxSatisfy;
+        Satisfy = 500;
         _isSatisfiedMode = false;
 
         StartCoroutine("DecreaseSatisfy");
