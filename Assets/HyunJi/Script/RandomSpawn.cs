@@ -1,18 +1,33 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RandomSpawn : MonoBehaviour
 {
 	public GameObject[] ingredients = new GameObject[10];
 	int ing_num;
 	float posX, posY;
-	float scale = 1;
+	bool timecheck, effectend;
+	public float x;
+
+	public float animTime = 2f;         // Fade 애니메이션 재생 시간 (단위:초).  
+	public Image fadeImage;            // UGUI의 Image컴포넌트 참조 변수.  
+	private float start = 0f;           // Mathf.Lerp 메소드의 첫번째 값.  
+	private float end = 1f;             // Mathf.Lerp 메소드의 두번째 값.  
+	private float time = 0f;            // Mathf.Lerp 메소드의 시간 값.  
+	private bool isPlaying = false;     // Fade 애니메이션의 중복 재생을 방지하기위해서 사용.
+
+	public Image fevertimeTxt;
 
 	// Start is called before the first frame update
 	void Start()
 	{
-		StartCoroutine(DecTime());
+		x = 0.01f; timecheck = false; effectend = false;
+		StartCoroutine(TimeCheck());
+		StartCoroutine(Spawn());
+		StartCoroutine(FadeIn());
+		StartCoroutine(TextBlink());
 	}
 
 	// Update is called once per frame
@@ -22,35 +37,70 @@ public class RandomSpawn : MonoBehaviour
 		posX = Random.Range(-10f, 10f);
 		posY = Random.Range(0, 5f);
 
-		StartCoroutine(Spawn());
+		if(timecheck)
+		{
+			x += 0.001f;
+		}
 	}
 
 	IEnumerator Spawn()
 	{
 		GameObject instant = Instantiate(ingredients[ing_num], new Vector3(posX, posY, 0), Quaternion.identity);
-		instant.transform.localScale = new Vector3(scale, scale, scale);
 		instant.transform.parent = gameObject.transform;
+		if(!effectend)
+		{
+			StartCoroutine(DecCount());
+		}
 		yield return new WaitForSecondsRealtime(2.0f);
 		Destroy(instant);
 	}
 
-	IEnumerator DecTime()
+	IEnumerator DecCount()
 	{
-		yield return new WaitForSecondsRealtime(7.0f);
-		StartCoroutine(DecScale());
+		yield return new WaitForSecondsRealtime(x);
+		StartCoroutine(Spawn());
 	}
 
-	IEnumerator DecScale()
+	IEnumerator TimeCheck()
 	{
-		if (scale > 0)
+		yield return new WaitForSecondsRealtime(7.0f);
+		timecheck = true;
+		yield return new WaitForSecondsRealtime(2.0f);
+		effectend = true;
+		yield return new WaitForSecondsRealtime(1.0f);
+		StartCoroutine(FadeOut());
+	}
+
+	IEnumerator FadeIn()
+	{
+		for (float i = 0f; i < 0.5f; i += 0.05f)
 		{
-			yield return new WaitForSecondsRealtime(1.0f);
-			scale -= 0.333f;
-			StartCoroutine(DecScale());
+			Color color = new Vector4(0, 0, 0, i);
+			fadeImage.color = color;
+			yield return 0;
 		}
-		else
+	}
+
+	IEnumerator FadeOut()
+	{
+		for (float i = 0.5f; i > 0f; i -= 0.05f)
 		{
-			Destroy(this.gameObject);
+			Color color = new Vector4(0, 0, 0, i);
+			fadeImage.color = color;
+			yield return 0;
+		}
+
+		Destroy(this.gameObject);
+	}
+
+	IEnumerator TextBlink()
+	{
+		for(int i = 0; i < 5; i++)
+		{
+			fevertimeTxt.gameObject.SetActive(true);
+			yield return new WaitForSecondsRealtime(0.3f);
+			fevertimeTxt.gameObject.SetActive(false);
+			yield return new WaitForSecondsRealtime(0.3f);
 		}
 	}
 }
