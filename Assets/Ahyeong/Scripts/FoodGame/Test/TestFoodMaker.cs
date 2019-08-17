@@ -13,8 +13,10 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     public Text resultText;
     public Spawner spawner;
 
+    public CurrentIngredientUI ingredientUI;
+
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
-    private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
+    //private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
 
     void Start()
     {
@@ -25,10 +27,14 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
     public void AddIngredient(FoodIngredient ingredient)
     {
-        var ui = Instantiate(prefab, uiParent);
-        ui.SetUI(ingredient);
-        uiQueue.Enqueue(ui);
         ingredients.Add(ingredient);
+        ingredientUI.SetUI(ingredients);
+
+        // TO-DO: 연출 필요
+        if(ingredients.Count >= 4)
+        {
+            MakeRecipe();
+        }
     }
 
     public void MakeRecipe()
@@ -56,12 +62,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
             FoodGameManager.Instance.AddSatisfy(sum);
         }
 
-        while (uiQueue.Count > 0)
-        {
-            var ui = uiQueue.Dequeue();
-            Destroy(ui.gameObject);
-        }
         ingredients.Clear();
-
+        ingredientUI.ResetUI();
     }
 }
