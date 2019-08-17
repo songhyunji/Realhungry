@@ -83,20 +83,12 @@ public class IngredientObject : MonoBehaviour
             {
                 FoodGameManager.Instance.Score += data.score;
             }
+
         }
     }
-
-    /*
+    
     void Update()
     {
-        if (transform.position.y < -10f)
-        {
-            DeactivateObject();
-            Debug.Log("Out");
-        }
-
         MyDebug.Log(activatedOb.Count + " + " + deactivatedOb.Count);
-
     }
-    */
 }
