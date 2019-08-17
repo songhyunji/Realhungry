@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ingredient
   - Barricades
+  - Bottom
   layers:
   - Default
   - TransparentFX

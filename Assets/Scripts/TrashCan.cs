@@ -2,20 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Pot : MonoBehaviour
+public class TrashCan : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D c)
     {
-        if (c.gameObject.tag == "Ingredient")
+        if (c.gameObject.tag.CompareTo("Ingredient") == 0)
         {
             var obj = c.GetComponent<IngredientObject>();
-            obj.AddIngredient();
             obj.DeactivateObject();
         }
-    }
-
-    public void MakeRecipe()
-    {
-        TestFoodMaker.Instance.MakeRecipe();
     }
 }

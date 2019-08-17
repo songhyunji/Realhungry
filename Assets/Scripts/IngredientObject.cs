@@ -68,12 +68,35 @@ public class IngredientObject : MonoBehaviour
         gameObject.SetActive(false);
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.collider.tag.CompareTo("Bottom") == 0)
+        {
+            DeactivateObject();
+
+            // 점수 감소
+            if(data.score > 0)
+            {
+                FoodGameManager.Instance.Score -= data.score;
+            }
+            else
+            {
+                FoodGameManager.Instance.Score += data.score;
+            }
+        }
+    }
+
+    /*
     void Update()
     {
         if (transform.position.y < -10f)
+        {
             DeactivateObject();
+            Debug.Log("Out");
+        }
 
         MyDebug.Log(activatedOb.Count + " + " + deactivatedOb.Count);
 
     }
+    */
 }
