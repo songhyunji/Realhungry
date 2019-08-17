@@ -39,7 +39,6 @@ public class Spawner : MonoBehaviour
         {
             next_ing = ingDB.GetRandomIngredient();
             nextIng_Image.sprite = next_ing.sprite;
-            nextIng_Text.text = next_ing.nameStr;
 
             yield return new WaitForSeconds(spawnCoolTime);
 
