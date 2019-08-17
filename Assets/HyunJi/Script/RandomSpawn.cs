@@ -9,7 +9,6 @@ public class RandomSpawn : MonoBehaviour
 	int ing_num;
 	float posX, posY;
 	bool timecheck, effectend;
-
 	public float x;
 
 	public float animTime = 2f;         // Fade 애니메이션 재생 시간 (단위:초).  
@@ -19,6 +18,8 @@ public class RandomSpawn : MonoBehaviour
 	private float time = 0f;            // Mathf.Lerp 메소드의 시간 값.  
 	private bool isPlaying = false;     // Fade 애니메이션의 중복 재생을 방지하기위해서 사용.
 
+	public Image fevertimeTxt;
+
 	// Start is called before the first frame update
 	void Start()
 	{
@@ -26,6 +27,7 @@ public class RandomSpawn : MonoBehaviour
 		StartCoroutine(TimeCheck());
 		StartCoroutine(Spawn());
 		StartCoroutine(FadeIn());
+		StartCoroutine(TextBlink());
 	}
 
 	// Update is called once per frame
@@ -89,5 +91,16 @@ public class RandomSpawn : MonoBehaviour
 		}
 
 		Destroy(this.gameObject);
+	}
+
+	IEnumerator TextBlink()
+	{
+		for(int i = 0; i < 5; i++)
+		{
+			fevertimeTxt.gameObject.SetActive(true);
+			yield return new WaitForSecondsRealtime(0.3f);
+			fevertimeTxt.gameObject.SetActive(false);
+			yield return new WaitForSecondsRealtime(0.3f);
+		}
 	}
 }

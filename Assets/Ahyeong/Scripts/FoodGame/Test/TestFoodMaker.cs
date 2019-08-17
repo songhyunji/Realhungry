@@ -39,17 +39,25 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         FoodRecipe result = recipeDatabase.MakeRecipe(ingredients);
         if(result)
         {
-            resultImg.sprite = result.sprite;
-            resultText.text = result.nameStr;
-
-            FoodGameManager.Instance.Score += result.Score;
-            FoodGameManager.Instance.AddSatisfy(result.Score);
-
 			count++;
 			if (count == 3)
 			{
 				Instantiate(effect, new Vector3(0, 0, 0), Quaternion.identity);
 				count = 0;
+
+				resultImg.sprite = result.sprite;
+				resultText.text = result.nameStr;
+
+				FoodGameManager.Instance.Score += result.Score * 2;
+				FoodGameManager.Instance.AddSatisfy(result.Score * 2);
+			}
+			else
+			{
+				resultImg.sprite = result.sprite;
+				resultText.text = result.nameStr;
+
+				FoodGameManager.Instance.Score += result.Score;
+				FoodGameManager.Instance.AddSatisfy(result.Score);
 			}
 		}
         else
