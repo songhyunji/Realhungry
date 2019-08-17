@@ -14,7 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameStr: "\uC2A4\uD14C\uC774\uD06C"
   description: 
+  value: 4
   ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 3b1451c76a5b1a142ac5acbdfe0be285, type: 2}
+    count: 2
   - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}

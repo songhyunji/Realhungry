@@ -64,13 +64,14 @@ public class FoodRecipe : ScriptableObject
 
     public int Score
     {
-        get { return _scoreSum * ingrediensEntries.Count; }
+        get { return _scoreSum * value; }
     }
 
     // 레시피 이름, 그림, 설명, 필요 재료, 계수
     public string nameStr;
     [TextArea]
     public string description;
+    public int value;
     public List<RecipeEntry> ingrediensEntries = new List<RecipeEntry>();
     public Sprite sprite;
     private int _recipeKey = -1;
@@ -94,8 +95,9 @@ public class FoodRecipe : ScriptableObject
         // name	description
         nameStr = (string)data["name"];
         description = (string)data["description"];
+        value = (int)data["value"];
 
-        for(int i = 1; i <= ingredientDatabase.ingredients.Count; i++)
+        for (int i = 1; i <= ingredientDatabase.ingredients.Count; i++)
         {
             string key = "ing_" + i;
             if(data.ContainsKey(key) && data[key] != null)

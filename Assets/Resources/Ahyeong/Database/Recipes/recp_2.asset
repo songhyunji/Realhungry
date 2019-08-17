@@ -15,7 +15,14 @@ MonoBehaviour:
   nameStr: "\uD1A0\uB9C8\uD1A0 \uC2A4\uD30C\uAC8C\uD2F0"
   description: "\uD0C4\uB825\uC788\uB294 \uC2A4\uD30C\uAC8C\uD2F0 \uBA74\uC5D0 \uD1A0\uB9C8\uD1A0
     \uC18C\uC2A4\uB97C \uC5B9\uC740 \uD1A0\uB9C8\uD1A0 \uC2A4\uD30C\uAC8C\uD2F0."
+  value: 2
   ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 2e48df09355063743bf2bf1ca3a76b00, type: 2}
+    count: 1
   - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
