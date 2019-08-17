@@ -7,6 +7,11 @@ using UnityEngine;
 [System.Serializable]
 public class RecipeEntry: IEquatable<RecipeEntry>, IComparable<RecipeEntry>
 {
+    public int Score
+    {
+        get { return ingredient.score * count; }
+    }
+
     public FoodIngredient ingredient;
     public int count = 1;
 
@@ -57,9 +62,9 @@ public class FoodRecipe : ScriptableObject
         }
     }
 
-    public int RecipeValue
+    public int Score
     {
-        get { return ingrediensEntries.Count; }
+        get { return _scoreSum * ingrediensEntries.Count; }
     }
 
     // 레시피 이름, 그림, 설명, 필요 재료, 계수
@@ -69,10 +74,17 @@ public class FoodRecipe : ScriptableObject
     public List<RecipeEntry> ingrediensEntries = new List<RecipeEntry>();
     public Sprite sprite;
     private int _recipeKey = -1;
+    private int _scoreSum = 0;
 
     public void Init()
     {
         ingrediensEntries.Sort();
+
+        _scoreSum = 0;
+        for(int i = 0; i< ingrediensEntries.Count; i++)
+        {
+            _scoreSum += ingrediensEntries[i].Score;
+        }
     }
 
 
