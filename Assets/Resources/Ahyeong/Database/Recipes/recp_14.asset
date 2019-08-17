@@ -10,15 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
-  m_Name: recp_8
+  m_Name: recp_14
   m_EditorClassIdentifier: 
-  nameStr: "\uB77C\uBA74"
-  description: 
-  value: 2
+  nameStr: "\uD314\uBCF4\uCC44"
+  description: "\uC5EC\uB35F \uAC00\uC9C0 \uADC0\uD55C \uC7AC\uB8CC\uB97C \uC368\uC11C
+    \uB9CC\uB4E0 \uC804\uD1B5 \uC911\uAD6D \uD669\uC2E4 \uC694\uB9AC."
+  value: 8
   ingrediensEntries:
   - ingredient: {fileID: 11400000, guid: eed88484abbfd354585051e0b1703e95, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: beedac66688e4d342af47b34322c21c1, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: 38826803aeb9bbd49ab2ae22b97ec9f2, type: 2}
     count: 1

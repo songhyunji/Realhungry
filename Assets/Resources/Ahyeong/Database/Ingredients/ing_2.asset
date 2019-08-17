@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ing_2
   m_EditorClassIdentifier: 
   id: 3
-  nameStr: "\uC57C\uCC44"
-  description: "\uAC74\uAC15\uC5D0 \uC88B\uC740 \uC57C\uCC44\uB4E4. \uB9DB\uC788\uB294
-    \uC57C\uCC44\uC640 \uD568\uAED8 \uD2BC\uD2BC\uD55C \uBAB8\uC744 \uB9CC\uB4E4\uC5B4\uBCF4\uC790."
+  nameStr: "\uC57C\uCC44\uC640 \uACFC\uC77C"
+  description: "\uAC74\uAC15\uC5D0 \uC88B\uC740 \uC57C\uCC44\uC640 \uACFC\uC77C \uC774\uB2E4."
   sprite: {fileID: 0}
-  score: 500
+  score: 25
   probability: 1
   weight: 0.75

@@ -10,16 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
-  m_Name: recp_8
+  m_Name: recp_12
   m_EditorClassIdentifier: 
-  nameStr: "\uB77C\uBA74"
-  description: 
-  value: 2
+  nameStr: "\uC2A4\uD14C\uC774\uD06C"
+  description: "\uD55C \uC785 \uBCA0\uC5B4\uBB3C\uBA74 \uB2EC\uC9DD\uC9C0\uADFC\uD55C
+    \uC721\uC999\uC774 \uC18C\uC2A4\uC640 \uD568\uAED8 \uD758\uB7EC\uB098\uC62C \uAC83\uB9CC
+    \uAC19\uB2E4."
+  value: 4
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: eed88484abbfd354585051e0b1703e95, type: 2}
-    count: 1
   - ingredient: {fileID: 11400000, guid: beedac66688e4d342af47b34322c21c1, type: 2}
     count: 1
-  - ingredient: {fileID: 11400000, guid: 38826803aeb9bbd49ab2ae22b97ec9f2, type: 2}
+  - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
     count: 1
+  - ingredient: {fileID: 11400000, guid: 38826803aeb9bbd49ab2ae22b97ec9f2, type: 2}
+    count: 2
   sprite: {fileID: 0}

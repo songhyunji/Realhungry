@@ -18,6 +18,6 @@ MonoBehaviour:
     \uB4F1 \uAE30\uBCF8\uC801\uC778 \uAC83\uBD80\uD130 \uC790\uADF9\uC801\uC778 \uAC83
     \uAE4C\uC9C0 \uBAA8\uB450 \uBAA8\uC544\uB193\uC558\uB2E4."
   sprite: {fileID: 0}
-  score: 300
+  score: 20
   probability: 1
   weight: 1

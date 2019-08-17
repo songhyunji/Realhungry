@@ -18,16 +18,10 @@ MonoBehaviour:
     \uBA39\uAE30 \uC88B\uC744 \uAC83 \uAC19\uB2E4."
   value: 2
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
+  - ingredient: {fileID: 11400000, guid: eed88484abbfd354585051e0b1703e95, type: 2}
     count: 1
-  - ingredient: {fileID: 11400000, guid: 2e48df09355063743bf2bf1ca3a76b00, type: 2}
+  - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
     count: 1
-  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 2e48df09355063743bf2bf1ca3a76b00, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
+  - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
     count: 1
   sprite: {fileID: 0}

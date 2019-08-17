@@ -17,6 +17,6 @@ MonoBehaviour:
   description: "\uAF2D \uCC59\uACA8\uBA39\uC5B4\uC57C\uD558\uB294 \uC720\uC81C\uD488\uACFC
     \uB2EC\uAC40. \uB9CE\uC740 \uC694\uB9AC\uC5D0 \uC4F0\uC778\uB2E4."
   sprite: {fileID: 0}
-  score: 500
+  score: 25
   probability: 1
   weight: 0.75
