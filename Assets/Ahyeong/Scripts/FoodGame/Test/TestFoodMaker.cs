@@ -44,7 +44,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         }
 
         ingredients.Add(ingredient);
-        ingredientUI.AddUI(ingredient);
+        ingredientUI.SetUI(ingredients);
 
         // TO-DO: 연출 필요
         if(ingredients.Count >= 4)
@@ -79,8 +79,6 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
             }
             FoodGameManager.Instance.Score += sum;
             FoodGameManager.Instance.AddSatisfy(sum);
-
-            ingredientUI.ShowUI();
         }
 
         ingredients.Clear();
