@@ -28,4 +28,8 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         Score = 0;
     }
 
+    public void AddSatisfy(int value)
+    {
+        satisfy.Satisfy += value;
+    }
 }

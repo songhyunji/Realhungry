@@ -51,7 +51,7 @@ public class IngredientObject : MonoBehaviour
     {
         data = ing;
         spRenderer.sprite = data.sprite;
-        rigid.sharedMaterial.bounciness = ing.weight;
+        rigid.sharedMaterial.bounciness = data.weight;
         
     }
 

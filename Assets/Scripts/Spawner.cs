@@ -10,7 +10,7 @@ public class Spawner : MonoBehaviour
     public Text nextIng_Text;
     public IngredientObject prefab;
 
-    private const float spawnCoolTime = 3f;
+    private const float spawnCoolTime = 2f;
 
     public void Init()
     {

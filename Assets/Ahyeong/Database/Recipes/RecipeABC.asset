@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameStr: "\uC694\uB9ACABC"
   description: 
+  value: 3
   ingrediensEntries:
   - ingredient: {fileID: 11400000, guid: 10f52d173308bf440b296e22c2054069, type: 2}
     count: 1

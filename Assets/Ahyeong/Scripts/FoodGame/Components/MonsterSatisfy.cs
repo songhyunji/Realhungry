@@ -62,7 +62,8 @@ public class MonsterSatisfy : MonoBehaviour
 
     public int _satisfy = 0;
     public int maxSatisfy = 1000;
-    public int decreaseAmount = 1;
+    public int decreaseAmount = 5;
+    public int satisfiedTime = 10;
     public MyFloatEvent _satisfyUpdateEvent;
     public MyBoolEvent _satisfyModeEvent;
 
@@ -80,14 +81,30 @@ public class MonsterSatisfy : MonoBehaviour
     {
         while(Satisfy > 0)
         {
-            Satisfy -= decreaseAmount;
+            if (!IsSatisfiedMode)
+                Satisfy -= decreaseAmount;
+
             yield return new WaitForSeconds(0.1f);
         }
     }
 
     IEnumerator SatisfiedMode()
     {
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(satisfiedTime);
+
         IsSatisfiedMode = false;
+    }
+
+    private int levelIncreaseTime = 30;
+
+    IEnumerator IncreaseLevel()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(levelIncreaseTime);
+
+            decreaseAmount += 1;
+            if (satisfiedTime > 5) satisfiedTime--;
+        }
     }
 }

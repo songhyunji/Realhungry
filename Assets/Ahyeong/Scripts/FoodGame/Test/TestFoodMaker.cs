@@ -38,11 +38,22 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         {
             resultImg.sprite = result.sprite;
             resultText.text = result.nameStr;
+
+            FoodGameManager.Instance.Score += result.Score;
+            FoodGameManager.Instance.AddSatisfy(result.Score);
         }
         else
         {
             resultImg.sprite = null;
             resultText.text = string.Empty;
+
+            int sum = 0;
+            foreach(var ing in ingredients)
+            {
+                sum += ing.score;
+            }
+            FoodGameManager.Instance.Score += sum;
+            FoodGameManager.Instance.AddSatisfy(sum);
         }
 
         while (uiQueue.Count > 0)
