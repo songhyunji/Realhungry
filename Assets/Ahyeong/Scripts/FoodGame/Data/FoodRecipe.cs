@@ -55,7 +55,7 @@ public class FoodRecipe : ScriptableObject
                         key += ingrediensEntries[i].ingredient.id;
                     }
                 }
-                Debug.Log(key);
+                //Debug.Log(key);
                 _recipeKey = key;
             }
             return _recipeKey;

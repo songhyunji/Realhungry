@@ -20,4 +20,4 @@ MonoBehaviour:
   ingrediensEntries:
   - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
     count: 2
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: 68fb1cdafdbb39442b75c58d8b2052fb, type: 3}

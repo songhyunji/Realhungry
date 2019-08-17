@@ -8,7 +8,9 @@ public class Pot : MonoBehaviour
     {
         if (c.gameObject.tag == "Ingredient")
         {
-            c.GetComponent<IngredientObject>().AddIngredient();
+            var obj = c.GetComponent<IngredientObject>();
+            obj.AddIngredient();
+            obj.DeactivateObject();
         }
     }
 

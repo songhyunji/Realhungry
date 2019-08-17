@@ -10,13 +10,17 @@ public class Spawner : MonoBehaviour
     public Text nextIng_Text;
     public IngredientObject prefab;
 
-    private const float spawnCoolTime = 2f;
+    public float spawnCoolTime = 2f;
 
     public void Init()
     {
         IngredientObject.Init_Ob(prefab);
+    }
 
+    public void StartSpawn()
+    {
         StartCoroutine(SpawnIngRoutine());
+        StartCoroutine(SpawningTrash());
     }
 
     public void Stop()
@@ -42,6 +46,23 @@ public class Spawner : MonoBehaviour
             var ing_Object = IngredientObject.Pull_Ob();
             ing_Object.transform.position = transform.position;
             ing_Object.Init(ing);
+        }
+
+    }
+
+    IEnumerator SpawningTrash()
+    {
+        int randTime = 0;
+        while (true)
+        {
+            FoodIngredient next_trash = ingDB.GetRandomTrash();
+
+            randTime = Random.Range(5, 16);
+            yield return new WaitForSeconds(randTime);
+
+            var ing_Object = IngredientObject.Pull_Ob();
+            ing_Object.transform.position = transform.position;
+            ing_Object.Init(next_trash);
         }
 
     }
