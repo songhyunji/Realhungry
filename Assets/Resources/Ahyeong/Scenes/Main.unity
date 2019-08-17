@@ -1373,7 +1373,6 @@ MonoBehaviour:
   resultImg: {fileID: 301921214}
   resultText: {fileID: 722089771}
   spawner: {fileID: 1370649178}
-  effect: {fileID: 5929398157455610416, guid: 9d852afedae09e740af7dad36354287a, type: 3}
 --- !u!1 &722089770
 GameObject:
   m_ObjectHideFlags: 0

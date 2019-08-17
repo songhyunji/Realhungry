@@ -16,7 +16,10 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
     private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
 
-    void Start()
+	private int count = 0;
+	public GameObject effect;
+
+	void Start()
     {
         recipeDatabase.Init();
         ingDB.Init();
@@ -41,7 +44,14 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
             FoodGameManager.Instance.Score += result.Score;
             FoodGameManager.Instance.AddSatisfy(result.Score);
-        }
+
+			count++;
+			if (count == 3)
+			{
+				Instantiate(effect, new Vector3(0, 0, 0), Quaternion.identity);
+				count = 0;
+			}
+		}
         else
         {
             resultImg.sprite = null;
@@ -54,6 +64,8 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
             }
             FoodGameManager.Instance.Score += sum;
             FoodGameManager.Instance.AddSatisfy(sum);
+
+			count = 0;
         }
 
         while (uiQueue.Count > 0)

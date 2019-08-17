@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Pot : MonoBehaviour
 {
+	
     void OnTriggerEnter2D(Collider2D c)
     {
         if (c.gameObject.tag == "Ingredient")
