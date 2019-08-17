@@ -16,6 +16,9 @@ public class MonsterSatisfy : MonoBehaviour
             if (value <= 0)
             {
                 _satisfy = 0;
+
+                // 게임 오버
+                FoodGameManager.Instance.EndGame();
             }
             else if (value > maxSatisfy)
             {

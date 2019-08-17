@@ -18,11 +18,16 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
     //private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
 
-    void Start()
+    public void Init()
     {
         recipeDatabase.Init();
         ingDB.Init();
-        spawner.Init();
+    }
+
+    public void ResetValue()
+    {
+        ingredients.Clear();
+        ingredientUI.ResetUI();
     }
 
     public void AddIngredient(FoodIngredient ingredient)

@@ -15,7 +15,10 @@ public class Spawner : MonoBehaviour
     public void Init()
     {
         IngredientObject.Init_Ob(prefab);
+    }
 
+    public void StartSpawn()
+    {
         StartCoroutine(SpawnIngRoutine());
     }
 
