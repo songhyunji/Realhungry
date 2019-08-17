@@ -12,20 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
   m_Name: recp_6
   m_EditorClassIdentifier: 
-  nameStr: "\uC2A4\uD14C\uC774\uD06C"
-  description: 
-  value: 4
+  nameStr: "\uC0DD\uC120\uC2A4\uD29C"
+  description: "\uBB3C\uACFC \uC0DD\uC120\uC744 \uB9C8\uAD6C \uC11E\uC5B4 \uBD80\uAE00\uBD80\uAE00
+    \uB053\uC5EC \uB9CC\uB4E0 \uC2A4\uD29C"
+  value: 2
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+  - ingredient: {fileID: 11400000, guid: beedac66688e4d342af47b34322c21c1, type: 2}
     count: 1
-  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 3b1451c76a5b1a142ac5acbdfe0be285, type: 2}
-    count: 2
-  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 3b1451c76a5b1a142ac5acbdfe0be285, type: 2}
+  - ingredient: {fileID: 11400000, guid: 38826803aeb9bbd49ab2ae22b97ec9f2, type: 2}
     count: 2
   sprite: {fileID: 0}
