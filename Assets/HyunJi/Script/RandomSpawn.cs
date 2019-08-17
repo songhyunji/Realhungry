@@ -12,7 +12,7 @@ public class RandomSpawn : MonoBehaviour
 	// Start is called before the first frame update
 	void Start()
 	{
-		StartCoroutine(DecScale());
+		StartCoroutine(DecTime());
 	}
 
 	// Update is called once per frame
@@ -34,18 +34,23 @@ public class RandomSpawn : MonoBehaviour
 		Destroy(instant);
 	}
 
+	IEnumerator DecTime()
+	{
+		yield return new WaitForSecondsRealtime(7.0f);
+		StartCoroutine(DecScale());
+	}
+
 	IEnumerator DecScale()
 	{
-		if(scale > 0)
+		if (scale > 0)
 		{
 			yield return new WaitForSecondsRealtime(1.0f);
-			scale -= 0.2f;
+			scale -= 0.333f;
 			StartCoroutine(DecScale());
 		}
 		else
 		{
 			Destroy(this.gameObject);
 		}
-
 	}
 }
