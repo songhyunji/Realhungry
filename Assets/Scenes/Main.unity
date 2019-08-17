@@ -3134,7 +3134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99d3d4276d183874eb16052b3bd85272, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ingDB: {fileID: 11400000, guid: ef55f76a922d76f40b8c73a5ca616007, type: 2}
+  ingDB: {fileID: 11400000, guid: f7aca4364079dda4485eba47e6dae031, type: 2}
   nextIng_Image: {fileID: 573135204}
   nextIng_Text: {fileID: 428073302}
   prefab: {fileID: 7844818781407377129, guid: f56e6436f3c84814d9abf298ac185c05, type: 3}
@@ -3438,7 +3438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _satisfy: 0
-  maxSatisfy: 100
+  maxSatisfy: 1000
   decreaseAmount: 1
   satisfiedTime: 10
   _satisfyUpdateEvent:

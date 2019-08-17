@@ -92,6 +92,7 @@ public class MonsterSatisfy : MonoBehaviour
     {
         yield return new WaitForSeconds(satisfiedTime);
 
+        Satisfy = 500;
         IsSatisfiedMode = false;
     }
 
