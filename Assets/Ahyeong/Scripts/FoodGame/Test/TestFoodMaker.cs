@@ -18,7 +18,12 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
     private List<FoodIngredient> ingredients = new List<FoodIngredient>();
     private List<int> scores = new List<int>();
-    //private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
+	//private Queue<TestIngredientUI> uiQueue = new Queue<TestIngredientUI>();
+
+	public bool fevertime;
+	public GameObject effector;
+	[SerializeField]
+	private int count;
 
     public void Init()
     {
@@ -65,11 +70,30 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         {
             foodEffect.ShowUI(result.sprite, result.Score);
 
-            FoodGameManager.Instance.Score += result.Score;
-            FoodGameManager.Instance.AddSatisfy(result.Score);
+			if(!fevertime)	// 피버타임이 아닐 때만 count
+			{
+				count++;
+				FoodGameManager.Instance.Score += result.Score;
+				FoodGameManager.Instance.AddSatisfy(result.Score);
+			}
+			else
+			{
+				FoodGameManager.Instance.Score += result.Score * 2;
+				FoodGameManager.Instance.AddSatisfy(result.Score * 2);
+			}
+
+			if(count == 3)	// 3 콤보 달성 시
+			{
+				fevertime = true;
+				Instantiate(effector, new Vector3(0, 0, 0), Quaternion.identity);
+				count = 0;
+			}
+
         }
         else
         {
+			count = 0;	// 콤보 연속 달성 실패 시 count 초기화
+
             scores.Clear();
             int sum = 0;
             foreach(var ing in ingredients)
