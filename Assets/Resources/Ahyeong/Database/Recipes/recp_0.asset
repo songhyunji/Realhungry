@@ -16,7 +16,14 @@ MonoBehaviour:
   description: "\uACE0\uC2AC\uACE0\uC2AC \uBC25\uC5D0 \uB530\uB4EF\uD55C \uACC4\uB780\uC744
     \uC5B9\uC740 \uC77C\uBC18 \uC624\uBBC0\uB77C\uC774\uC2A4. \uCF00\uCC71\uC758 \uC0C8\uCF64\uD55C
     \uD5A5\uAE30\uAC00 \uC2AC\uBA70\uC2DC \uC785\uB9DB\uC744 \uC790\uADF9\uD55C\uB2E4."
+  value: 2
   ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 559060e82accf0d4ea31e7efd5ccf396, type: 2}
+    count: 1
   - ingredient: {fileID: 11400000, guid: ce875ff08eae8414b8657288a16c7749, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: 3414aa629866e3c49a81d3d0cc87aca9, type: 2}
