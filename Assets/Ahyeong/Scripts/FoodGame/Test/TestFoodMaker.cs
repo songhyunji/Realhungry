@@ -9,8 +9,9 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     public FoodIngredientDatabase ingDB;
     public TestIngredientUI prefab;
     public Transform uiParent;
-    public Image resultImg;
-    public Text resultText;
+    //public Image resultImg;
+    public EatFoodEffect foodEffect;
+    //public Text resultText;
     public Spawner spawner;
 
     public CurrentIngredientUI ingredientUI;
@@ -53,20 +54,21 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
     public void MakeRecipe()
     {
+        if(ingredients.Count == 0)
+        {
+            return;
+        }
+
         FoodRecipe result = recipeDatabase.MakeRecipe(ingredients);
         if(result)
         {
-            resultImg.sprite = result.sprite;
-            resultText.text = result.nameStr;
+            foodEffect.ShowUI(result.sprite, result.Score);
 
             FoodGameManager.Instance.Score += result.Score;
             FoodGameManager.Instance.AddSatisfy(result.Score);
         }
         else
         {
-            resultImg.sprite = null;
-            resultText.text = string.Empty;
-
             int sum = 0;
             foreach(var ing in ingredients)
             {
