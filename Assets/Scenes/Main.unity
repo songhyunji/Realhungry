@@ -4056,7 +4056,7 @@ MonoBehaviour:
   nextIng_Image: {fileID: 573135204}
   nextIng_Text: {fileID: 428073302}
   prefab: {fileID: 7844818781407377129, guid: f56e6436f3c84814d9abf298ac185c05, type: 3}
-  spawnCoolTime: 4
+  spawnCoolTime: 2
 --- !u!1 &1390661023
 GameObject:
   m_ObjectHideFlags: 0
