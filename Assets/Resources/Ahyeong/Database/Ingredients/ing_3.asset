@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: ing_3
   m_EditorClassIdentifier: 
   id: 4
-  nameStr: "\uC720\uC81C\uD488\uACFC \uB2EC\uAC40"
-  description: "\uAF2D \uCC59\uACA8\uBA39\uC5B4\uC57C\uD558\uB294 \uC720\uC81C\uD488\uACFC
-    \uB2EC\uAC40. \uB9CE\uC740 \uC694\uB9AC\uC5D0 \uC4F0\uC778\uB2E4."
+  nameStr: "\uACE0\uAE30\uC640 \uD574\uC0B0\uBB3C"
+  description: "\uC120\uD64D\uBE5B\uC758 \uD54F\uAE30\uAC00 \uB3C4\uB294 \uACE0\uAE30\uB4E4\uACFC
+    \uAE08\uBC29\uC774\uB77C\uB3C4 \uC0B4\uC544 \uC6C0\uC9C1\uC77C \uAC83 \uAC19\uC740
+    \uD574\uC0B0\uBB3C\uC774\uB2E4."
   sprite: {fileID: 0}
-  score: 25
+  score: 30
   probability: 1
-  weight: 0.75
+  weight: 0.5

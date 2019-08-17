@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d6e17bd0239b484f9bb26bf57fe79ae, type: 3}
   m_Name: recp_5
   m_EditorClassIdentifier: 
-  nameStr: "\uB538\uAE30\uCF00\uC774\uD06C"
-  description: "\uB2EC\uCF64\uD55C \uC0DD\uD06C\uB9BC \uBCA0\uC774\uC2A4\uC5D0 \uC0C8\uCF64\uB2EC\uCF64\uD55C
-    \uC81C\uCCA0 \uB538\uAE30\uB97C \uCF55\uCF55 \uC5B9\uC5B4 \uB9CC\uB4E0 \uCF00\uC774\uD06C"
+  nameStr: "\uD574\uC0B0\uBB3C \uACC4\uB780\uCC1C"
+  description: "\uC2F1\uC2F1\uD55C \uD574\uC0B0\uBB3C\uC774 \uB4E4\uC5B4\uAC04 \uACC4\uB780\uCC1C"
   value: 2
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: eed88484abbfd354585051e0b1703e95, type: 2}
-    count: 1
   - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
-    count: 2
+    count: 1
+  - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
+    count: 1
   sprite: {fileID: 0}

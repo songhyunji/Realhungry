@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ing_2
   m_EditorClassIdentifier: 
   id: 3
-  nameStr: "\uC57C\uCC44\uC640 \uACFC\uC77C"
-  description: "\uAC74\uAC15\uC5D0 \uC88B\uC740 \uC57C\uCC44\uC640 \uACFC\uC77C \uC774\uB2E4."
+  nameStr: "\uC720\uC81C\uD488\uACFC \uB2EC\uAC40"
+  description: "\uAF2D \uCC59\uACA8\uBA39\uC5B4\uC57C\uD558\uB294 \uC720\uC81C\uD488\uACFC
+    \uB2EC\uAC40. \uB9CE\uC740 \uC694\uB9AC\uC5D0 \uC4F0\uC778\uB2E4."
   sprite: {fileID: 0}
   score: 25
   probability: 1
-  weight: 0.75
+  weight: 0.5

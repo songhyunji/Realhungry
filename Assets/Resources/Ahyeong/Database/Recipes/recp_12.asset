@@ -18,10 +18,8 @@ MonoBehaviour:
     \uAC19\uB2E4."
   value: 4
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: beedac66688e4d342af47b34322c21c1, type: 2}
+  - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
     count: 1
   - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
-    count: 1
-  - ingredient: {fileID: 11400000, guid: 38826803aeb9bbd49ab2ae22b97ec9f2, type: 2}
     count: 2
   sprite: {fileID: 0}

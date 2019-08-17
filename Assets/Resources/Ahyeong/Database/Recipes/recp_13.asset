@@ -18,8 +18,8 @@ MonoBehaviour:
     \uB9DB\uC774 \uC77C\uD488\uC774\uB2E4. "
   value: 4
   ingrediensEntries:
+  - ingredient: {fileID: 11400000, guid: beedac66688e4d342af47b34322c21c1, type: 2}
+    count: 2
   - ingredient: {fileID: 11400000, guid: 9e6a73e0724651748b1eb0cb8515548f, type: 2}
-    count: 2
-  - ingredient: {fileID: 11400000, guid: 5057c4028bfde1249be8409c2012686c, type: 2}
-    count: 2
+    count: 1
   sprite: {fileID: 0}
