@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+public delegate void OnFeverStart();
+public delegate void OnFeverEnd();
+
 public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 {
     public FoodRecipeDatabase recipeDatabase;
@@ -25,10 +28,16 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 	[SerializeField]
 	private int count;
 
+    public event OnFeverStart onFeverStart;
+    public event OnFeverEnd onFeverEnd;
+
     public void Init()
     {
         recipeDatabase.Init();
         ingDB.Init();
+
+        onFeverStart += new OnFeverStart(FeverStart);
+        onFeverEnd += new OnFeverEnd(FeverEnd);
     }
 
     public void ResetValue()
@@ -68,6 +77,8 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         FoodRecipe result = recipeDatabase.MakeRecipe(ingredients);
         if(result)
         {
+            SoundManager.Instance.Play(1);
+
             foodEffect.ShowUI(result.sprite, result.Score);
 
 			if(!fevertime)	// 피버타임이 아닐 때만 count
@@ -84,9 +95,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
 			if(count == 3)	// 3 콤보 달성 시
 			{
-				fevertime = true;
-				Instantiate(effector, new Vector3(0, 0, 0), Quaternion.identity);
-				count = 0;
+                onFeverStart();
 			}
 
         }
@@ -107,5 +116,36 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
         ingredients.Clear();
         ingredientUI.ResetUI();
+    }
+
+    GameObject FeverEffect;
+
+    void FeverStart()
+    {
+        SoundManager.Instance.Play(2);
+
+        fevertime = true;
+        FeverEffect = Instantiate(effector, new Vector3(0, 0, 0), Quaternion.identity);
+        count = 0;
+
+        StartCoroutine(FeverCount());
+    }
+
+    void FeverEnd()
+    {
+        fevertime = false;
+        Destroy(FeverEffect);
+    }
+
+    IEnumerator FeverCount()
+    {
+        yield return new WaitForSeconds(10.5f);
+
+        onFeverEnd();
+    }
+
+    void Update()
+    {
+        MyDebug.Log(fevertime);
     }
 }

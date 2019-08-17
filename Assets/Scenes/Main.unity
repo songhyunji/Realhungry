@@ -541,6 +541,7 @@ Transform:
   - {fileID: 1525269476}
   - {fileID: 1390661024}
   - {fileID: 667823448}
+  - {fileID: 953809247}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2091,6 +2092,10 @@ MonoBehaviour:
   foodEffect: {fileID: 709837077}
   spawner: {fileID: 1370649178}
   ingredientUI: {fileID: 490845176}
+  fevertime: 0
+  effector: {fileID: 8165524913930686263, guid: 3e2dc77e72946664588822b14eba483c,
+    type: 3}
+  count: 0
 --- !u!1 &691245043
 GameObject:
   m_ObjectHideFlags: 0
@@ -3220,6 +3225,57 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912244468}
   m_CullTransparentMesh: 0
+--- !u!1 &953809246
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 953809247}
+  - component: {fileID: 953809248}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &953809247
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953809246}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 144609173}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &953809248
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 953809246}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: daeb5dfcb786dd549a6d8161480779a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bgmSource: {fileID: 0}
+  sfxSource: {fileID: 0}
+  sound:
+  - {fileID: 8300000, guid: 49f234dceb1985f4b89e18af9234b218, type: 3}
+  - {fileID: 8300000, guid: e4e97d7d4160aef4bbe38c15554ebb0a, type: 3}
+  - {fileID: 8300000, guid: 24f69c61e05e6c24aa56943c8370c006, type: 3}
+  - {fileID: 8300000, guid: 535e80ce67943174b9196d2e256e4d63, type: 3}
+  - {fileID: 8300000, guid: 856b08a20ae60644b9e9d9065f2c225a, type: 3}
 --- !u!1 &977467867
 GameObject:
   m_ObjectHideFlags: 0
