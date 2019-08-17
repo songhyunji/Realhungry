@@ -52,6 +52,7 @@ public class RandomSpawn : MonoBehaviour
 			StartCoroutine(DecCount());
 		}
 		yield return new WaitForSecondsRealtime(2.0f);
+
 		Destroy(instant);
 	}
 
@@ -89,7 +90,7 @@ public class RandomSpawn : MonoBehaviour
 			fadeImage.color = color;
 			yield return 0;
 		}
-
+		TestFoodMaker.Instance.fevertime = false;
 		Destroy(this.gameObject);
 	}
 
