@@ -48,6 +48,8 @@ public class MonsterSatisfy : MonoBehaviour
         {
             if (_isSatisfiedMode == value) return;
 
+            SoundManager.Instance.Play(3);
+
             _isSatisfiedMode = value;
             _satisfyModeEvent.Invoke(value);
             
@@ -64,9 +66,9 @@ public class MonsterSatisfy : MonoBehaviour
     }
 
     public int _satisfy = 0;
-    public int maxSatisfy = 1000;
-    public int decreaseAmount = 5;
-    public int satisfiedTime = 10;
+    private int maxSatisfy = 1000;
+    private int decreaseAmount = 5;
+    private int satisfiedTime = 10;
     public MyFloatEvent _satisfyUpdateEvent;
     public MyBoolEvent _satisfyModeEvent;
 
@@ -75,6 +77,7 @@ public class MonsterSatisfy : MonoBehaviour
     public void ResetValues()
     {
         Satisfy = 500;
+        decreaseAmount = 5;
         _isSatisfiedMode = false;
 
         StartCoroutine("DecreaseSatisfy");

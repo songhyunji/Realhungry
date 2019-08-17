@@ -81,6 +81,9 @@ public class SoundManager : PersistentSingleton<SoundManager>
 
     private void Start()
     {
+        TestFoodMaker.Instance.onFeverStart += new OnFeverStart(FeverStart);
+        TestFoodMaker.Instance.onFeverEnd += new OnFeverEnd(FeverEnd);
+
         if (bgmSource == null)
         {
             bgmSource = gameObject.AddComponent<AudioSource>();
@@ -101,7 +104,15 @@ public class SoundManager : PersistentSingleton<SoundManager>
         bgmSource.Play();
     }
 
+    void FeverStart()
+    {
+        bgmSource.pitch = 1.2f;
+    }
 
+    void FeverEnd()
+    {
+        bgmSource.pitch = 1.0f;
+    }
     
     /*
      * n

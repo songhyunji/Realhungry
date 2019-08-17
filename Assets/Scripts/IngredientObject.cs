@@ -88,6 +88,5 @@ public class IngredientObject : MonoBehaviour
     
     void Update()
     {
-        MyDebug.Log(activatedOb.Count + " + " + deactivatedOb.Count);
     }
 }

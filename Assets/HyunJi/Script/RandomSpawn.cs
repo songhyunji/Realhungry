@@ -91,7 +91,6 @@ public class RandomSpawn : MonoBehaviour
 			yield return 0;
 		}
 		TestFoodMaker.Instance.fevertime = false;
-		Destroy(this.gameObject);
 	}
 
 	IEnumerator TextBlink()

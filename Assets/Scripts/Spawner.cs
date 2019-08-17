@@ -15,6 +15,9 @@ public class Spawner : MonoBehaviour
     public void Init()
     {
         IngredientObject.Init_Ob(prefab);
+
+        TestFoodMaker.Instance.onFeverStart += new OnFeverStart(FeverStart);
+        TestFoodMaker.Instance.onFeverEnd += new OnFeverEnd(FeverEnd);
     }
 
     public void StartSpawn()
@@ -36,14 +39,17 @@ public class Spawner : MonoBehaviour
         {
             next_ing = ingDB.GetRandomIngredient();
             nextIng_Image.sprite = next_ing.sprite;
-            nextIng_Text.text = next_ing.nameStr;
 
             yield return new WaitForSeconds(spawnCoolTime);
 
             FoodIngredient ing = next_ing;
 
+
             var ing_Object = IngredientObject.Pull_Ob();
-            ing_Object.transform.position = transform.position;
+
+            Vector3 x_offset = new Vector3(Random.Range(-0.1f, 0.1f), 0f, 0f);
+
+            ing_Object.transform.position = transform.position + x_offset;
             ing_Object.Init(ing);
         }
 
@@ -60,9 +66,22 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSeconds(randTime);
 
             var ing_Object = IngredientObject.Pull_Ob();
-            ing_Object.transform.position = transform.position;
+
+            Vector3 x_offset = new Vector3(Random.Range(-0.1f, 0.1f), 0f, 0f);
+
+            ing_Object.transform.position = transform.position + x_offset;
             ing_Object.Init(next_trash);
         }
 
+    }
+
+    void FeverStart()
+    {
+        spawnCoolTime = 1f;
+    }
+
+    void FeverEnd()
+    {
+        spawnCoolTime = 2f;
     }
 }
