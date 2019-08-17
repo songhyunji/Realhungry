@@ -16,8 +16,8 @@ MonoBehaviour:
   description: 
   value: 2
   ingrediensEntries:
-  - ingredient: {fileID: 11400000, guid: a9ced25afcf34744f93cb3e21f4aa598, type: 2}
+  - ingredient: {fileID: 11400000, guid: adedee05d780d8147b9c1ccdbc644c2e, type: 2}
     count: 1
-  - ingredient: {fileID: 11400000, guid: 50d9efc4ce3fbda43a70a222f447521a, type: 2}
+  - ingredient: {fileID: 11400000, guid: 04ccd566acc14294b90c654c8d91e7c6, type: 2}
     count: 1
   sprite: {fileID: 21300000, guid: f78f401e7a6563f4998bce06ffb668e4, type: 3}
