@@ -17,7 +17,7 @@ MonoBehaviour:
   description: "\uC18C\uAE08\uACFC \uC124\uD0D5, \uAC04\uC7A5, \uCC38\uAE30\uB984
     \uB4F1 \uAE30\uBCF8\uC801\uC778 \uAC83\uBD80\uD130 \uC790\uADF9\uC801\uC778 \uAC83
     \uAE4C\uC9C0 \uBAA8\uB450 \uBAA8\uC544\uB193\uC558\uB2E4."
-  sprite: {fileID: 0}
+  sprite: {fileID: 21300000, guid: e43c32a2e1c17554d82938e8d21f7ac5, type: 3}
   score: 20
   probability: 1
   weight: 1

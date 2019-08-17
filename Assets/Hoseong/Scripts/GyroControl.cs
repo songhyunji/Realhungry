@@ -5,6 +5,7 @@ using UnityEngine;
 public class GyroControl : MonoBehaviour
 {
     private const float ac_coef = 9.81f * 1.5f;
+    public GameObject column;
 
     void Update()
     {

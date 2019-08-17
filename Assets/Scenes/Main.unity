@@ -1366,8 +1366,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 028ab0232b97000409853762dbe249a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  recipeDatabase: {fileID: 11400000, guid: 479aca9302c96114fbb6d95d80a7fb02, type: 2}
-  ingDB: {fileID: 11400000, guid: ef55f76a922d76f40b8c73a5ca616007, type: 2}
+  recipeDatabase: {fileID: 11400000, guid: 084646c752b4d6b4caf501a11514f32a, type: 2}
+  ingDB: {fileID: 11400000, guid: f7aca4364079dda4485eba47e6dae031, type: 2}
   prefab: {fileID: 3317829574691957500, guid: 142ea483ca945bd4a91d576dd4547272, type: 3}
   uiParent: {fileID: 1549356507}
   resultImg: {fileID: 301921214}
@@ -4142,7 +4142,7 @@ Transform:
   m_GameObject: {fileID: 2127722134}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0.8, z: 5}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1, z: 1}
   m_Children:
   - {fileID: 508667625}
   m_Father: {fileID: 1520752468}
