@@ -27,7 +27,7 @@ public class IngredientObject : MonoBehaviour
     public static IngredientObject Pull_Ob()
     {
         IngredientObject temp;
-        if (activatedOb.Count >= max_Ob)
+        if (deactivatedOb.Count == 0)
         {
             temp = Instantiate(prefab);
             activatedOb.Add(temp);
@@ -43,7 +43,7 @@ public class IngredientObject : MonoBehaviour
     }
 
     public SpriteRenderer spRenderer;
-    private FoodIngredient data;
+    public FoodIngredient data;
 
     public Rigidbody2D rigid;
 
@@ -58,7 +58,6 @@ public class IngredientObject : MonoBehaviour
     public void AddIngredient()
     {
         TestFoodMaker.Instance.AddIngredient(this.data);
-        DeactivateObject();
     }
 
     public void DeactivateObject()

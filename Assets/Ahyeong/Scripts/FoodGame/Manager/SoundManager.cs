@@ -71,6 +71,8 @@ public class SoundManager : PersistentSingleton<SoundManager>
     public AudioSource bgmSource;
     public AudioSource sfxSource;
 
+    public List<AudioClip> sound;
+
     private bool _isBgmMute = false;
     private bool _isSfxMute = false;
 
@@ -93,6 +95,25 @@ public class SoundManager : PersistentSingleton<SoundManager>
         sfxSource.volume = SfxVolume;
         bgmSource.mute = BgmMute;
         sfxSource.mute = SfxMute;
+
+        bgmSource.clip = sound[0];
+        bgmSource.loop = true;
+        bgmSource.Play();
+    }
+
+
+    
+    /*
+     * n
+     * 1 : 성공
+     * 2 : 피버
+     * 3 : 음배불러
+     * 4 : 으아악
+    */
+    public void Play(int n)
+    {
+        sfxSource.clip = sound[n];
+        sfxSource.Play();
     }
 
     public void PlayBgm(AudioClip clip)

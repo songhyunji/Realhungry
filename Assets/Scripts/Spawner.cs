@@ -34,7 +34,6 @@ public class Spawner : MonoBehaviour
     {
         while (true)
         {
-
             next_ing = ingDB.GetRandomIngredient();
             nextIng_Image.sprite = next_ing.sprite;
             nextIng_Text.text = next_ing.nameStr;
