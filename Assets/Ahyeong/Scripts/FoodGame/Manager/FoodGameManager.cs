@@ -44,6 +44,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
 
     public void StartGame()
     {
+        Time.timeScale = 1f;
         Score = 0;
         spawner.StartSpawn();
         foodMaker.ResetValue();
