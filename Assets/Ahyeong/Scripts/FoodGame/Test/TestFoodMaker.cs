@@ -102,12 +102,14 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
                 case 1:
                     comboImg.gameObject.SetActive(true);
                     comboImg.sprite = combo1spr;
-                    StartCoroutine(HideCombo());
+                    StopCoroutine("HideCombo");
+                    StartCoroutine("HideCombo");
                     break;
                 case 2:
                     comboImg.gameObject.SetActive(true);
                     comboImg.sprite = combo2spr;
-                    StartCoroutine(HideCombo());
+                    StopCoroutine("HideCombo");
+                    StartCoroutine("HideCombo");
                     break;
                 case 3:
                     onFeverStart();

@@ -76,7 +76,7 @@ public class MonsterSatisfy : MonoBehaviour
 
     public void ResetValues()
     {
-        Satisfy = 500;
+        Satisfy = 1000;
         decreaseAmount = 5;
         _isSatisfiedMode = false;
 
