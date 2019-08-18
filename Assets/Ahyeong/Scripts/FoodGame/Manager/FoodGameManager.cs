@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FoodGameManager : MonoSingleton<FoodGameManager>
 {
@@ -19,6 +20,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         }
     }
 
+    public GameObject pauseUI;
     public GameObject overUI;
     public Text overScoreText;
     public MonsterSatisfy satisfy;
@@ -55,6 +57,23 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         spawner.Stop();
         overUI.SetActive(true);
         overScoreText.text = Score.ToString();
+    }
+
+    public void PauseGame()
+    {
+        Time.timeScale = 0f;
+        pauseUI.SetActive(true);
+    }
+
+    public void UnpauseGame()
+    {
+        Time.timeScale = 1f;
+        pauseUI.SetActive(false);
+    }
+
+    public void GoHome()
+    {
+        SceneManager.LoadScene("Title");
     }
 
     public void AddSatisfy(int value)

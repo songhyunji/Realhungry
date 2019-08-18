@@ -7,6 +7,7 @@ public class EatFoodEffect : MonoBehaviour
 {
     public SpriteRenderer sr;
     public Text scoreText;
+    public float initScale = 0.3f;
     private int _score = 0;
 
     private void Start()
@@ -25,7 +26,7 @@ public class EatFoodEffect : MonoBehaviour
     IEnumerator PlayEffect()
     {
         // 작아짐
-        float fromSize = 0.2f;
+        float fromSize = initScale;
         float toSize = 0f;
         float step = Time.deltaTime / 1.5f;
         float t = 0f;
