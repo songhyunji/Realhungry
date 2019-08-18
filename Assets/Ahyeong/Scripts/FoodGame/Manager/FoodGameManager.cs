@@ -16,7 +16,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         set
         {
             _score = value;
-            scoreUIEvent.Invoke(value);
+            scoreUIEvent.Invoke(value * 10);
         }
     }
 
@@ -57,7 +57,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
         foodMaker.EndGame();
         spawner.Stop();
         overUI.SetActive(true);
-        overScoreText.text = Score.ToString();
+        overScoreText.text = (Score * 10).ToString();
     }
 
     public void PauseGame()
