@@ -24,6 +24,14 @@ public class IngredientObject : MonoBehaviour
         }
     }
 
+    public static void ResetObject()
+    {
+        while(activatedOb.Count > 0)
+        {
+            activatedOb[0].DeactivateObject();
+        }
+    }
+
     public static IngredientObject Pull_Ob()
     {
         IngredientObject temp;
