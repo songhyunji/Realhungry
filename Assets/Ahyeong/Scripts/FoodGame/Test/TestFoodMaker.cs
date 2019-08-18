@@ -150,9 +150,4 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
         onFeverEnd();
     }
-
-    void Update()
-    {
-        MyDebug.Log(fevertime);
-    }
 }

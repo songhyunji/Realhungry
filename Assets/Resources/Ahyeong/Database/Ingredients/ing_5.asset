@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 6
   nameStr: "\uC0DD\uC120\uAC00\uC2DC"
   description: 
-  sprite: {fileID: 21300000, guid: cc857235834e736459a86840af19ec32, type: 3}
+  sprite: {fileID: 21300000, guid: 4f7992c6f86bcb14285c10082814d094, type: 3}
   score: -50
   probability: 1
   weight: 0.5
