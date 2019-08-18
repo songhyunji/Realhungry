@@ -76,7 +76,7 @@ public class MonsterSatisfy : MonoBehaviour
 
     public void ResetValues()
     {
-        Satisfy = 500;
+        Satisfy = 1000;
         decreaseAmount = 5;
         _isSatisfiedMode = false;
 
@@ -98,7 +98,7 @@ public class MonsterSatisfy : MonoBehaviour
     {
         yield return new WaitForSeconds(satisfiedTime);
 
-        Satisfy = 500;
+        Satisfy = 1000;
         IsSatisfiedMode = false;
     }
 

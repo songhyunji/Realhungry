@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class CookButton : MonoBehaviour
 {
+    public GameObject Tuto;
+
 	public float speed = 1f;
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,12 @@ public class CookButton : MonoBehaviour
 
 	public void FaceBtnPress()
 	{
-		SceneManager.LoadScene("Tutorial");
-	}
+        SceneManager.LoadScene("Main");
+
+    }
+
+    public void TutoBtnPress()
+    {
+        Tuto.SetActive(true);
+    }
 }

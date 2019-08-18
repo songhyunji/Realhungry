@@ -16,6 +16,7 @@ public class Pot : MonoBehaviour
             {
                 effect.gameObject.SetActive(true);
                 effect.Play();
+                TestFoodMaker.Instance.EndGame();
             }
 
             obj.AddIngredient();

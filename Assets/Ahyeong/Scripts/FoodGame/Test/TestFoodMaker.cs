@@ -44,6 +44,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     {
         ingredients.Clear();
         ingredientUI.ResetUI();
+        count = 0;
     }
 
     public void AddIngredient(FoodIngredient ingredient)
@@ -126,9 +127,15 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 
         fevertime = true;
         FeverEffect = Instantiate(effector, new Vector3(0, 0, 0), Quaternion.identity);
-        count = 0;
 
         StartCoroutine(FeverCount());
+    }
+
+    public void EndGame()
+    {
+        StopAllCoroutines();
+        onFeverEnd();
+        count = 0;
     }
 
     void FeverEnd()

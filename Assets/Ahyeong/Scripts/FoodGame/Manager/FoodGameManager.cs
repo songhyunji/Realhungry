@@ -54,6 +54,7 @@ public class FoodGameManager : MonoSingleton<FoodGameManager>
 
     public void EndGame()
     {
+        foodMaker.EndGame();
         spawner.Stop();
         overUI.SetActive(true);
         overScoreText.text = Score.ToString();

@@ -44,7 +44,6 @@ public class Spawner : MonoBehaviour
 
             FoodIngredient ing = next_ing;
 
-
             var ing_Object = IngredientObject.Pull_Ob();
 
             Vector3 x_offset = new Vector3(Random.Range(-0.1f, 0.1f), 0f, 0f);
