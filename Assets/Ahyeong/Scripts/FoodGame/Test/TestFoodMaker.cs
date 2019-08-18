@@ -31,6 +31,10 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     public event OnFeverStart onFeverStart;
     public event OnFeverEnd onFeverEnd;
 
+    public Image comboImg;
+    public Sprite combo1spr;
+    public Sprite combo2spr;
+
     public void Init()
     {
         recipeDatabase.Init();
@@ -44,6 +48,7 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
     {
         ingredients.Clear();
         ingredientUI.ResetUI();
+        comboImg.gameObject.SetActive(false);
     }
 
     public void AddIngredient(FoodIngredient ingredient)
@@ -92,11 +97,22 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
 				FoodGameManager.Instance.Score += result.Score * 2;
 				FoodGameManager.Instance.AddSatisfy(result.Score * 2);
 			}
-
-			if(count == 3)	// 3 콤보 달성 시
-			{
-                onFeverStart();
-			}
+            switch(count)
+            {
+                case 1:
+                    comboImg.gameObject.SetActive(true);
+                    comboImg.sprite = combo1spr;
+                    StartCoroutine(HideCombo());
+                    break;
+                case 2:
+                    comboImg.gameObject.SetActive(true);
+                    comboImg.sprite = combo2spr;
+                    StartCoroutine(HideCombo());
+                    break;
+                case 3:
+                    onFeverStart();
+                    break;
+            }
 
         }
         else
@@ -142,5 +158,11 @@ public class TestFoodMaker : MonoSingleton<TestFoodMaker>
         yield return new WaitForSeconds(10.5f);
 
         onFeverEnd();
+    }
+
+    IEnumerator HideCombo()
+    {
+        yield return new WaitForSeconds(0.5f);
+        comboImg.gameObject.SetActive(false);
     }
 }
